@@ -1,0 +1,20 @@
+﻿@model Publications
+@using (this.Html.BeginForm("Publications", "Publication", FormMethod.Post,
+                                                new { enctype = "multipart/form-data" }))
+{
+    @(this.Html.ValidationSummary(false))
+    @(this.Html.AntiForgeryToken())
+
+    @(this.Html.LabelFor(model => model.reference))
+    @(this.Html.TextBoxFor(model => model.reference))
+    @(this.Html.ValidationMessageFor(model => model.reference))
+    <input type="submit" value="Submit!" />
+}
+@{
+    for (int i = 0; i < CVApp1.Controllers.Publication.model1.Count; i++)
+    {
+        <div>@CVApp1.Controllers.Publication.model1[i].reference </div>
+    }
+
+}
+

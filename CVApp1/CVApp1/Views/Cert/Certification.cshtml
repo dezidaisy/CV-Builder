@@ -1,0 +1,35 @@
+﻿@model CVApp1.Models.Cert
+@using (this.Html.BeginForm("Certification", "Cert", FormMethod.Post,
+                                                            new { enctype = "multipart/form-data" }))
+{
+    @(this.Html.ValidationSummary(false))
+    @(this.Html.AntiForgeryToken())
+
+    @(this.Html.LabelFor(model => model.course))
+    @(this.Html.TextBoxFor(model => model.course))
+    @(this.Html.ValidationMessageFor(model => model.course))
+    <br />
+    @(this.Html.LabelFor(model => model.company))
+    @(this.Html.TextBoxFor(model => model.company))
+    @(this.Html.ValidationMessageFor(model => model.company))
+    <br />
+    @(this.Html.LabelFor(model => model.date1))
+    @(this.Html.TextBoxFor(model => model.date1))
+    @(this.Html.ValidationMessageFor(model => model.date1))
+    <br />
+    @(this.Html.LabelFor(model => model.desc))
+    @(this.Html.TextBoxFor(model => model.desc))
+    @(this.Html.ValidationMessageFor(model => model.desc))
+    <input type="submit" value="Submit!" />
+}
+@{
+    for (int i = 0; i < CVApp1.Controllers.Cert.model1.Count; i++)
+    {
+        <div>@CVApp1.Controllers.Cert.model1[i].course </div>
+        <div>@CVApp1.Controllers.Cert.model1[i].company </div>
+        <div>@CVApp1.Controllers.Cert.model1[i].date1 </div>
+        <div>@CVApp1.Controllers.Cert.model1[i].desc </div>
+    }
+
+}
+

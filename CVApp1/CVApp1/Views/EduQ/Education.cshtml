@@ -1,0 +1,40 @@
+﻿@model EduQ
+@using (this.Html.BeginForm("Education", "EduQ",FormMethod.Post,
+                                    new { enctype = "multipart/form-data" }))
+{
+    @(this.Html.ValidationSummary(false))
+    @(this.Html.AntiForgeryToken())
+
+    @(this.Html.LabelFor(model => model.degreename))
+    @(this.Html.TextBoxFor(model => model.degreename))
+    @(this.Html.ValidationMessageFor(model => model.degreename))
+    <br/>
+    @(this.Html.LabelFor(model => model.degreetype))
+    @(this.Html.TextBoxFor(model => model.degreetype))
+    @(this.Html.ValidationMessageFor(model => model.degreetype))
+    <br />
+    @(this.Html.LabelFor(model => model.Institute))
+    @(this.Html.TextBoxFor(model => model.Institute))
+    @(this.Html.ValidationMessageFor(model => model.Institute))
+    <br />
+    @(this.Html.LabelFor(model => model.fromd))
+    @(this.Html.TextBoxFor(model => model.fromd))
+    @(this.Html.ValidationMessageFor(model => model.fromd))
+    <br />
+    @(this.Html.LabelFor(model => model.tod))
+    @(this.Html.TextBoxFor(model => model.tod))
+    @(this.Html.ValidationMessageFor(model => model.tod))
+    <input type="submit" value="Submit!" />
+}
+@{ 
+    for (int i = 0; i < CVApp1.Controllers.EduQ.model1.Count; i++)
+    {
+        <div>@CVApp1.Controllers.EduQ.model1[i].degreename </div>
+        <div>@CVApp1.Controllers.EduQ.model1[i].degreetype </div>
+        <div>@CVApp1.Controllers.EduQ.model1[i].Institute </div>
+        <div>@CVApp1.Controllers.EduQ.model1[i].fromd </div>
+        <div>@CVApp1.Controllers.EduQ.model1[i].tod </div>
+    }
+
+}
+

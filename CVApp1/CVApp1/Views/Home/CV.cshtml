@@ -1,0 +1,94 @@
+﻿@{
+    ViewData["Title"] = "Curriculum Vitae";
+}
+<h2>@ViewData["Title"]</h2>
+@model CVApp1.Models.CV
+@using (Html.BeginForm("CV", "Home"))
+{<div id="CV1">
+    <div>@Model.name</div>
+     <div>@Model.tel</div>
+     <div>@Model.emailaddress</div>
+     <div>@Model.address</div>
+     <div>@Model.Birthdate</div>
+     <div>@Model.headline</div>
+        @{  for (int @i = 0; @i < @Model.Education.Count; @i++)
+            {<div>
+        <input type="checkbox" name="a-@i" />@Model.Education[@i].degreename
+    </div>
+        <div>
+            @Model.Education[@i].degreetype
+        </div>
+        <div>
+            @Model.Education[@i].Institute
+        </div>
+        <div>
+            @Model.Education[@i].fromd
+        </div>
+        <div>
+            @Model.Education[@i].tod
+        </div>
+                }
+            }
+
+            </div>
+            <div id="Publ">
+                @{  for (int @i = 0; @i < @Model.Publications.Count; @i++)
+                    {<div>
+                    <input type="checkbox" name="b-@i" />@Model.Publications[@i].reference
+                </div>}
+                    }
+                </div>
+                <div id="Certf">
+                    @{  for (int @i = 0; @i < @Model.Certifications.Count; @i++)
+                        {<div>
+                        <input type="checkbox" name="c-@i" />@Model.Certifications[@i].course
+                    </div>
+                        <div>
+                           @Model.Certifications[@i].company
+                        </div>
+                        <div>
+                            @Model.Certifications[@i].date1
+                        </div>
+                        <div>
+                            @Model.Certifications[@i].desc
+                        </div>}
+                    }
+                </div>
+                <div id="WorkE">
+                    @{  for (int @i = 0; @i < @Model.WorkExp.Count; @i++)
+                        {<div>
+                        <input type="checkbox" name="d-@i" />@Model.WorkExp[@i].position
+                    </div>
+                    <div>
+                        @Model.WorkExp[@i].company
+                    </div>
+                        <div>
+                            @Model.WorkExp[@i].caddrss
+                        </div>
+                        <div>
+                            @Model.WorkExp[@i].fromd
+                        </div>
+                        <div>
+                            @Model.WorkExp[@i].tod
+                        </div>
+                        <div>
+                            @Model.WorkExp[@i].desc
+                        </div>
+                        }
+                    }
+                    <div>@Model.hobbies</div>
+                </div>
+
+
+    <input type="submit" 
+            value="Delete"/><input type="reset"
+       value="Reset" onclick="ResetC()" />
+}
+
+<script type="text/javascript">
+   function ResetC(){
+        document.getElementById('CV1').innerHTML = ""
+    
+    }
+
+</script>

@@ -1,0 +1,45 @@
+﻿@model WorkExp
+@using (this.Html.BeginForm("WorkExp", "WorkExp1", FormMethod.Post,
+                                                new { enctype = "multipart/form-data" }))
+{
+    @(this.Html.ValidationSummary(false))
+    @(this.Html.AntiForgeryToken())
+
+    @(this.Html.LabelFor(model => model.position))
+    @(this.Html.TextBoxFor(model => model.position))
+    @(this.Html.ValidationMessageFor(model => model.position))
+    <br />
+    @(this.Html.LabelFor(model => model.company))
+    @(this.Html.TextBoxFor(model => model.company))
+    @(this.Html.ValidationMessageFor(model => model.company))
+    <br />
+    @(this.Html.LabelFor(model => model.caddrss))
+    @(this.Html.TextBoxFor(model => model.caddrss))
+    @(this.Html.ValidationMessageFor(model => model.caddrss))
+    <br />
+    @(this.Html.LabelFor(model => model.fromd))
+    @(this.Html.TextBoxFor(model => model.fromd))
+    @(this.Html.ValidationMessageFor(model => model.fromd))
+    <br />
+    @(this.Html.LabelFor(model => model.tod))
+    @(this.Html.TextBoxFor(model => model.tod))
+    @(this.Html.ValidationMessageFor(model => model.tod))
+    <br />
+    @(this.Html.LabelFor(model => model.desc))
+    @(this.Html.TextBoxFor(model => model.desc))
+    @(this.Html.ValidationMessageFor(model => model.desc))
+    <input type="submit" value="Submit!" />
+}
+@{
+    for (int i = 0; i < CVApp1.Controllers.WorkExp1.model1.Count; i++)
+    {
+        <div>@CVApp1.Controllers.WorkExp1.model1[i].position </div>
+        <div>@CVApp1.Controllers.WorkExp1.model1[i].company </div>
+        <div>@CVApp1.Controllers.WorkExp1.model1[i].caddrss </div>
+        <div>@CVApp1.Controllers.WorkExp1.model1[i].fromd </div>
+        <div>@CVApp1.Controllers.WorkExp1.model1[i].tod </div>
+        <div>@CVApp1.Controllers.WorkExp1.model1[i].desc </div>
+    }
+
+}
+

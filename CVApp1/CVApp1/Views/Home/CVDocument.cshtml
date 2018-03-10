@@ -1,0 +1,94 @@
+﻿@{
+Layout = "~/Views/Shared/_LayoutWord.cshtml";
+ViewData["Title"] = "Curriculum Vitae";
+}
+@model CVApp1.Models.CV
+<div>@ViewData["Title"]</div>
+<div id="CV1">
+    <div>
+        <div>@Model.name</div>
+        <div>@Model.tel</div>
+        <div>@Model.emailaddress</div>
+        <div>@Model.address</div>
+        <div>@Model.Birthdate</div>
+        <div>@Model.headline</div>
+        @{  for (int @i = 0; @i < @Model.Education.Count; @i++)
+            {<div>
+                @Model.Education[@i].degreename
+            </div>
+            <div>
+                @Model.Education[@i].degreetype
+            </div>
+            <div>
+                @Model.Education[@i].Institute
+            </div>
+            <div>
+                @Model.Education[@i].fromd
+            </div>
+            <div>
+                @Model.Education[@i].tod
+            </div>
+                }
+        }
+
+
+        <div id="Publ">
+            @{  for (int @i = 0; @i < @Model.Publications.Count; @i++)
+                    {<div>
+                    @Model.Publications[@i].reference
+                </div>}
+            }
+        </div>
+        <div id="Certf">
+            @{  for (int @i = 0; @i < @Model.Certifications.Count; @i++)
+                        {<div>
+                    @Model.Certifications[@i].course
+                </div>
+                <div>
+                    @Model.Certifications[@i].company
+                </div>
+                <div>
+                    @Model.Certifications[@i].date1
+                </div>
+                <div>
+                    @Model.Certifications[@i].desc
+                </div>}
+            }
+        </div>
+        <div id="WorkE">
+            @{  for (int @i = 0; @i < @Model.WorkExp.Count; @i++)
+                        {<div>
+                    @Model.WorkExp[@i].position
+                </div>
+                <div>
+                    @Model.WorkExp[@i].company
+                </div>
+                <div>
+                    @Model.WorkExp[@i].caddrss
+                </div>
+                <div>
+                    @Model.WorkExp[@i].fromd
+                </div>
+                <div>
+                    @Model.WorkExp[@i].tod
+                </div>
+                <div>
+                    @Model.WorkExp[@i].desc
+                </div>
+                        }
+            }
+            <div>@Model.hobbies</div>
+        </div>
+    </div>
+               </div>
+
+
+
+
+<script type="text/javascript">
+   function ResetC(){
+        document.getElementById('CV1').innerHTML = ""
+    
+    }
+
+</script>

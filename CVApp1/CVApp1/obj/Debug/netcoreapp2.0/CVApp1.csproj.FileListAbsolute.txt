@@ -1,0 +1,11 @@
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\obj\Debug\netcoreapp2.0\CVApp1.csprojResolveAssemblyReference.cache
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\obj\Debug\netcoreapp2.0\CVApp1.csproj.CoreCompileInputs.cache
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\obj\Debug\netcoreapp2.0\CVApp1.AssemblyInfoInputs.cache
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\obj\Debug\netcoreapp2.0\CVApp1.AssemblyInfo.cs
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\bin\Debug\netcoreapp2.0\CVApp1.deps.json
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\bin\Debug\netcoreapp2.0\CVApp1.runtimeconfig.json
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\bin\Debug\netcoreapp2.0\CVApp1.runtimeconfig.dev.json
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\bin\Debug\netcoreapp2.0\CVApp1.dll
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\bin\Debug\netcoreapp2.0\CVApp1.pdb
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\obj\Debug\netcoreapp2.0\CVApp1.dll
+C:\Users\Desiree Dias\source\repos\CVApp1\CVApp1\obj\Debug\netcoreapp2.0\CVApp1.pdb

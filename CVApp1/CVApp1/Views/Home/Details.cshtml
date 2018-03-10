@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Details";
+}
+
+@if (ViewBag.WordDocumentMode == null || !ViewBag.WordDocumentMode)
+{
+    <h2>@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+}
+
+@model CV
+@using (this.Html.BeginForm("Details", "Home", FormMethod.Post,
+                                                new { enctype = "multipart/form-data" }))
+{
+    @(this.Html.ValidationSummary(false))
+    @(this.Html.AntiForgeryToken())
+
+    @(this.Html.LabelFor(model => model.name))
+    @(this.Html.TextBoxFor(model => model.name))
+    @(this.Html.ValidationMessageFor(model => model.name))
+    <br />
+    @(this.Html.LabelFor(model => model.tel))
+    @(this.Html.TextBoxFor(model => model.tel))
+    @(this.Html.ValidationMessageFor(model => model.tel))
+    <br />
+    @(this.Html.LabelFor(model => model.emailaddress))
+    @(this.Html.TextBoxFor(model => model.emailaddress))
+    @(this.Html.ValidationMessageFor(model => model.emailaddress))
+    <br />
+    @(this.Html.LabelFor(model => model.address))
+    @(this.Html.TextBoxFor(model => model.address))
+    @(this.Html.ValidationMessageFor(model => model.address))
+    <br />
+    @(this.Html.LabelFor(model => model.Birthdate))
+    @(this.Html.TextBoxFor(model => model.Birthdate))
+    @(this.Html.ValidationMessageFor(model => model.Birthdate))
+    <br />
+    @(this.Html.LabelFor(model => model.headline))
+    @(this.Html.TextBoxFor(model => model.headline))
+    @(this.Html.ValidationMessageFor(model => model.headline))
+    <br />
+    @(this.Html.LabelFor(model => model.hobbies))
+    @(this.Html.TextBoxFor(model => model.hobbies))
+    @(this.Html.ValidationMessageFor(model => model.hobbies))
+    <input type="submit" value="Submit!" />
+}
+@{
+    <div>@Model.name </div>
+    <div>@Model.tel </div>
+    <div>@Model.emailaddress </div>
+    <div>@Model.address </div>
+    <div>@Model.Birthdate </div>
+    <div>@Model.headline</div>
+    <div>@Model.hobbies </div>
+
+
+}
+
